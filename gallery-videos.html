@@ -1,0 +1,22 @@
+<img src="images/services/tree-removal.jpg" alt="Our Work" width="600" height="465">
+<div class="desc"><span class="opaquebg"></span>
+  <div class="block">
+  <div><iframe class="youtube-player" type="text/html" width="547" height="332" src="http://www.youtube.com/embed/5jwb3apDVVk" frameborder="0"></iframe></div>
+    <ul class="page1 videoWades Tree Service, Local Tree Service Our Videoss">
+      <li><a href="http://www.youtube.com/embed/5jwb3apDVVk" class="active" title="Notch and Drop"><img src="images/photos/our-work/image-15-t.jpg" width="120" height="80" alt="Wades Tree Service, Local Tree Service Our Videos"></a></li>
+      <li><a href="http://www.youtube.com/embed/rQJU2l_K5jM" title="Tree Top To Chipper"><img src="images/photos/our-work/image-06-t.jpg" width="120" height="80" alt="Wades Tree Service, Local Tree Service Our Videos"></a></li>
+      <li><a href="http://www.youtube.com/embed/8Ewvsefz6hU" title="Final Cut"><img src="images/photos/our-work/image-17-t.jpg" width="120" height="80" alt="Wades Tree Service, Local Tree Service Our Videos"></a></li>
+      <li><a href="http://www.youtube.com/embed/uXZ_Fts_hyo" title="Stump Grinding"><img src="images/photos/our-gear/image-15-t.jpg" width="120" height="80" alt="Wades Tree Service, Local Tree Service Our Videos"></a></li>
+    </ul>
+  </div>
+</div>
+<script>
+$(function(){
+	$('.videoWades Tree Service, Local Tree Service Our Videoss a').live('click', function(e){
+		$('.videoWades Tree Service, Local Tree Service Our Videoss a.active').removeClass('active');
+		$('.youtube-player').attr('src', $(this).attr('href'));
+		$(this).addClass('active');
+		e.preventDefault();
+	});
+});
+</script>
