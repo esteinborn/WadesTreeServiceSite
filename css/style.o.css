@@ -1,0 +1,655 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1.2;
+}
+ol, ul {
+	padding:5px 0 5px 30px;
+}
+li {
+	padding:2px 0;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+/* remember to define focus styles! */
+
+:focus {
+	outline: 0;
+}
+/* remember to highlight inserts somehow! */
+
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	padding:4px 0;
+	color:#1E5C95;
+	text-shadow: 1px 1px 1px #BBB;
+}
+h1 {
+	font-size:24px;
+}
+h2 {
+	font-size:23px;
+}
+h3 {
+	font-size:22px;
+}
+h4 {
+	font-size:21px;
+}
+h5 {
+	font-size:20px;
+}
+h6 {
+	font-size:16px;
+}
+html {
+	overflow-y:scroll;
+}
+body {
+	background:url(../images/interface/em_bg.png) repeat-x #EAEAEA;
+	font-size:16px;
+	font-family:Tahoma, Geneva, sans-serif;
+}
+#wrapper {
+	width:960px;
+	padding:0 10px;
+	margin:0 auto;
+	overflow:hidden;
+}
+#header {
+	width:960px;
+	overflow:hidden;
+}
+.banner {
+	display:block;
+	margin:0;
+	padding:0;
+	width:553px;
+	height:150px;
+	float:left;
+	position:relative;
+	top:-19px;
+	text-decoration:none;
+}
+#navigation {
+	background:url(../images/interface/nav-bg.png) repeat-x 0 0;
+	clear:left;
+	float:left;
+	margin:10px 0 10px 4px;
+	padding:0;
+	height:28px;
+	width:99%;
+	border:1px solid #b0b0b0;
+	-moz-box-shadow:0 0 3px #888;
+	-moz-border-radius:3px;
+}
+#navigation li {
+	display:inline;
+}
+#navigation a {
+	text-shadow: 1px 1px 3px #000;
+	color:#EEE;
+	height:28px;
+	display:block;
+	float:left;
+	line-height:26px;
+	font-family: Tahoma;
+	font-size:19px;
+	text-align:center;
+	text-decoration:none;
+}
+.home{width:140px;}
+.estimate{width:220px;}
+.gallery, .test{width:180px;}
+.facebook{width:200px; text-decoration:none;}
+.facebook img{vertical-align:text-bottom;}
+#navigation a:hover {
+	color:#EEF;
+	font-size:21px;
+	line-height:25px;
+	text-shadow: 2px 2px 1px #333;
+}
+#emergency {
+	margin:0;
+	padding:30px 0;
+	line-height:22px;
+	width:220px;
+	float:right;
+	text-align:center;
+	color:#900;
+	height:90px;
+	font-weight:700;
+}
+#content {
+	padding:10px 20px 30px 20px;
+}
+p {
+	margin:10px 20px;
+	font-size:16px;
+	line-height:1.4em;
+}
+a, a:visited{color:#00E; }
+a:focus, a:hover{color:#09E;}
+#photoVideoSlider a, #servicesSlider a, #footer a {color:#0FF;text-decoration:none;} 
+#photoVideoSlider a:hover, #servicesSlider a:hover, #footer a:hover {color:#FF0;} 
+a.pager{text-decoration:underline;}
+.hidden {
+	display:none;
+}
+.floatleft {float:left;}
+.cf:before,.cf:after {content: " ";display: table;}
+.cf:after {clear: both;}
+.cf {*zoom: 1;}
+.twoCol {width:46%; margin:1%; float:left;}
+#contactContainer {
+	overflow:hidden;
+	height:480px;
+}
+#formContainer {
+	position:absolute;
+}
+#successfulSubmit {
+	display:none;
+	position:absolute;
+}
+#contactForm {
+	margin:15px 0;
+	padding:0;
+}
+#contactForm fieldset {
+	outline:none;
+	border:none;
+}
+#contactForm legend {
+	color:red;
+	font-size:11px;
+}
+#contactForm p {
+	margin:0;
+	padding:0;
+	color:#1E5C95;
+}
+#contactForm label {
+	width:400px;
+	margin:0;
+	padding:0;
+	display:block;
+}
+#contactForm input, #contactForm textarea {
+	width:400px;
+	margin:2px 0 9px;
+	padding:0 0 0 5px;
+	font-size:18px;
+	line-height:30px;
+	font-family:Arial, Helvetica, sans-serif;
+	border:1px solid #CCC;
+	color:#444;
+	height:30px;
+	overflow-x:hidden;
+	-moz-box-shadow: 0px 0px 2px #BBB;
+	-webkit-box-shadow: 0px 0px 2px #BBB;
+	box-shadow: 0px 0px 2px #BBB;
+}
+#contactForm input:focus, #contactForm textarea:focus {
+	border:1px solid #AAA;
+	-moz-box-shadow: 0px 0px 3px #999;
+	-webkit-box-shadow: 0px 0px 3px #999;
+	box-shadow: 0px 0px 3px #999;
+}
+#contactForm textarea {
+	height:125px;
+	line-height:25px;
+}
+#contactForm button {
+	height:30px;
+	width:auto;
+	padding:0 10px;
+	background-color:#CCC;
+	border:1px solid #999;
+	color:#1E5C95;
+	font-weight:700;
+	-moz-box-shadow: 0px 0px 2px #BBB;
+	-webkit-box-shadow: 0px 0px 2px #BBB;
+	box-shadow: 0px 0px 2px #BBB;
+}
+button::-moz-focus-inner { border: 0; }
+#contactForm button:focus, #contactForm button:active, #contactForm .disabled{outline:none; background-color:#EEE;border:1px solid #CCC;}
+button, submit, label {
+	cursor:pointer;
+}
+#contactForm label.error {
+	color: #D00;
+	float:right;
+	width:220px;
+	line-height:30px;
+	padding:0 0 0 10px;
+}
+.ie7 #contactForm label.error, .ie6 #contactForm label.error {
+	float:none;
+	position:absolute;
+}
+#contactForm input.error, #contactForm textarea.error {
+	border:1px solid #D00;
+}
+#successfulSubmit {
+	color:#1E5C95;
+}
+#testimonials {
+	overflow:hidden;
+	width:880px;
+	padding:10px 10px 20px 10px;
+	margin:0 auto;
+}
+#testimonials li {
+	float:left;
+	list-style-type:none;
+	margin:0 15px 20px 0;
+	padding:0;
+	width:48%;
+}
+#testimonials .quote {
+	font-size:20px;
+	font-style:italic;
+	line-height:30px;
+	margin:0;
+	padding:10px 20px;
+	text-align:justify;
+	font-family:"Times New Roman", Times, serif;
+	color:#222;
+}
+#testimonials .quoteMark {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	position: absolute;
+	padding:0;
+	font-size: 50px;
+	color:#1E5C95;
+}
+#testimonials .author {
+	font-size:14px;
+	font-weight:bold;
+	margin:0;
+	padding:10px 5px 10px 20px;
+	text-align:right;
+	color:#1E5C95;
+}
+#footerTop {
+	background:url(../images/footer-top.jpg) repeat-x top left;
+	width:100%;
+	height:70px;
+	display:block;
+}
+#footer {
+	width:100%;
+	text-shadow: 1px 1px 3px #000;
+	color:#EEE;
+	height:770px;
+	overflow:hidden;
+	display:block;
+	padding:0;
+	display:block;
+	background:url(../images/tiled-footer-min.jpg) repeat 0 0;
+}
+#footer h3 {
+	text-shadow: 1px 1px 3px #000;
+	color:#EEE;
+}
+.text-shadow {
+	text-shadow: 1px 1px 3px #000;
+}
+.box-shadow {
+	-moz-box-shadow: 0px 0px 7px #000;
+	-webkit-box-shadow: 0px 0px 7px #000;
+	box-shadow: 0px 0px 7px #000;
+}
+.box-shadow-inset {
+	-moz-box-shadow: inset 0px 0px 7px #000;
+	-webkit-box-shadow: inset 0px 0px 7px #000;
+	box-shadow: inset 0px 0px 7px #000;
+}
+.corner-all {
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+#footer p {
+	overflow:hidden;
+	text-align:justify;
+	font-size:17px;
+}
+#footer .centered {
+	width:864px;
+	margin:30px auto 0;
+	padding-left:25px;
+}
+#footer img {
+	position:relative;
+	top:-10px;
+	left:-10px;
+	width:200px;
+	height:135px;
+	padding:0;
+	margin:8px;
+	float:left;
+}
+#footerContentbg {
+	margin:0 auto;
+	background-color:#333;
+	border:1px solid #555;
+	padding:20px 10px;
+	position:relative;
+	height:690px;
+	width:880px;
+	opacity:.8;
+}
+#footerContent {
+	margin:0 auto;
+	padding:15px 10px;
+	width:880px;
+	position:relative;
+	top:-740px;
+}
+.ie6 #footerContent, .ie7 #footerContent {
+	margin:0 auto;
+}
+/* Click Block CSS */
+
+.youtube-player{margin: 10px 0 0 26px;}
+#photoVideoSlider .main_image .videoThumbs{padding: 0 4px;}
+#photoVideoSlider .main_image .videoThumbs li {
+	height:87px;
+}
+#photoVideoSlider .main_image .videoThumbs li a {
+	margin:3px 12px 0;
+}
+#photoVideoSlider .main_image .videoThumbs li a.active{
+	border:2px solid #CCC;
+	padding:0;
+}
+
+
+#photoVideoSlider .main_image li a:hover {
+	border:2px solid #CCC;
+	padding:0;
+}
+
+
+#servicesSlider, #photoVideoSlider {
+	font-size:10px;
+	overflow:hidden;
+	margin:10px 0;
+}
+#photoVideoSlider .image_thumb ul li ul {
+	display:none;
+}
+#photoVideoSlider .image_thumb li {
+	padding:19.5px 10px;
+}
+#photoVideoSlider .main_image {
+	xheight:465px;
+}
+#photoVideoSlider li.active {
+	background-position:right center;
+}
+#photoVideoSlider .desc {
+	top:-467px;
+	width:600px;
+}
+#photoVideoSlider .main_image .block {
+	width:600px;
+}
+#photoVideoSlider .main_image h2 {
+	display:none;
+}
+#photoVideoSlider .main_image ul {
+	width:592px;
+	padding:4px;
+	overflow:hidden;
+	margin:0;
+	position:absolute;
+}
+#photoVideoSlider .main_image li {
+	display:inline;
+	float:left;
+	width:148px;
+	height:108px;
+	padding:0;
+	margin:0;
+}
+#photoVideoSlider .main_image li a {
+	display:block;
+	float:left;
+	width:120px;
+	height:80px;
+	margin:12px;
+	padding:2px;
+}
+.ie6 #photoVideoSlider .main_image li a{
+margin:6px;	
+}
+#photoVideoSlider .main_image li a:hover {
+	border:2px solid #CCC;
+	padding:0;
+}
+
+#photoVideoSlider .main_image p {
+	padding:0;
+	text-align:center;
+	font-size:1.7em;
+	position:absolute;
+	bottom:0;
+	width:600px;
+	height:28px;
+}
+#photoVideoSlider .main_image p a, #photoVideoSlider .main_image p a:visited {
+	color:#EEE;
+}
+#photoVideoSlider .main_image p a:hover {
+	color:#FF0;
+}
+a.notSelected {
+	text-decoration:none;
+}
+#imagePreloading {
+	display:none;
+}
+.main_image {
+	width: 600px;
+	height: 456px;
+	float: right;
+	background: #333;
+	position: relative;
+	overflow: hidden;
+	color: #fff;
+}
+.main_image h2 {
+	font-size: 2em;
+	font-weight: normal;
+	margin: 0 0 5px;
+	padding: 10px;
+	color:#FFF;
+	text-shadow: 1px 1px 3px #000;
+}
+.main_image p {
+	font-size: 1.6em;
+	padding: 10px;
+	margin: 0;
+	line-height: 1.3em;
+	text-shadow: 1px 1px 3px #000;
+}
+.main_image .imageDesc{position:absolute; bottom:0; font-size:12px; color:#EEE;}
+.main_image a.collapse {
+	background: url(../images/services/btn_collapse.png) no-repeat right top;
+	height: 93px;
+	width: 27px;
+	text-indent: -99999px;
+	position: absolute;
+	top: 363px;
+	right: -27px;
+}
+.block small {
+	display:block;
+	padding: 0 0 0 20px;
+	font-size: 1.1em;
+	line-height:1.5em;
+}
+.pictureTab {
+	background:url(../images/services/icon_pic.gif) no-repeat 0 center
+}
+.videoTab {
+	background:url(../images/services/icon_film.gif) no-repeat 0 center
+}
+.main_image .block small {
+	display:none;
+}
+.main_image .desc {
+	position: relative;
+	top: -458px;
+	left: 0;
+	width: 235px;
+	xdisplay: none;
+	height:100%
+}
+.showMe {
+	display:block;
+}
+.main_image .opaquebg {
+	background:none repeat scroll 0 0 #111111;
+	height:100%;
+	position:absolute;
+	width:100%;
+	display:block;
+}
+.main_image .block {
+	width:235px;
+	position:relative;
+	height: 100%;
+}
+.main_image a.show {
+	background-position: left bottom;
+}
+.image_thumb {
+	float: right;
+	width: 299px;
+	background: #f0f0f0;
+	border-left: 1px solid #fff;
+	border-top: 1px solid #ccc;
+}
+.image_thumb img {
+	border: 1px solid #ccc;
+	padding: 2px;
+	background: #fff;
+	float: left;
+}
+.image_thumb ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.image_thumb li {
+	margin: 0;
+	padding: 12px 10px;
+	background: #f0f0f0 url(../images/services/nav_a.gif) repeat-x;
+	width: 279px;
+	float: left;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #fff;
+	border-left: 1px solid #ccc;
+}
+.image_thumb li.hover {
+	background: #ddd;
+	cursor: pointer;
+}
+.image_thumb li.hover img {
+	-moz-box-shadow: 0px 0px 3px #093e1d;
+	-webkit-box-shadow: 0px 0px 2px #000;
+	box-shadow: 0px 0px 2px #000;
+}
+.image_thumb li.active {
+	background: #fff url(../images/services/selected-arrow.png) right top no-repeat;
+	cursor: default;
+}
+.image_thumb li.active img {
+	-moz-box-shadow: 1px 1px 2px #093e1d;
+	-webkit-box-shadow: 0px 0px 2px #000;
+	box-shadow: 0px 0px 2px #000;
+}
+html .image_thumb h2 {
+	font-size: 1.5em;
+	margin: 5px 0;
+	padding: 0;
+	color:#444;
+}
+.image_thumb .block {
+	float: left;
+	margin-left: 10px;
+	padding: 0;
+	width: 190px;
+}
+.image_thumb p {
+	display: none;
+}
+/*
+    ColorBox Core Style
+    The following rules are the styles that are consistant between themes.
+    Avoid changing this area to maintain compatability with future versions of ColorBox.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative; overflow:visible;}
+#cboxLoadedContent{overflow:auto;}
+#cboxLoadedContent iframe{display:block; width:100%; height:100%; border:0;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+
+/* 
+    ColorBox example user style
+    The following rules are ordered and tabbed in a way that represents the
+    order/nesting of the generated HTML, so that the structure easier to understand.
+*/
+#cboxOverlay{background:#fff;}
+
+#colorbox{}
+    #cboxContent{margin-top:32px;}
+        #cboxLoadedContent{background:#000; padding:1px;}
+        #cboxLoadingGraphic{background:url(images/loading.gif) center center no-repeat;}
+        #cboxLoadingOverlay{background:#000;}
+        #cboxTitle{position:absolute; top:-22px; left:0; color:#000;}
+        #cboxCurrent{position:absolute; top:-22px; right:205px; text-indent:-9999px;}
+        #cboxSlideshow, #cboxPrevious, #cboxNext, #cboxClose{text-indent:-9999px; width:20px; height:20px; position:absolute; top:-20px; background:url(images/controls.png) 0 0 no-repeat;}
+        #cboxPrevious{background-position:0px 0px; right:44px;}
+        #cboxPrevious.hover{background-position:0px -25px;}
+        #cboxNext{background-position:-25px 0px; right:22px;}
+        #cboxNext.hover{background-position:-25px -25px;}
+        #cboxClose{background-position:-50px 0px; right:0;}
+        #cboxClose.hover{background-position:-50px -25px;}
+        .cboxSlideshow_on #cboxPrevious, .cboxSlideshow_off #cboxPrevious{right:66px;}
+        .cboxSlideshow_on #cboxSlideshow{background-position:-75px -25px; right:44px;}
+        .cboxSlideshow_on #cboxSlideshow.hover{background-position:-100px -25px;}
+        .cboxSlideshow_off #cboxSlideshow{background-position:-75px 0px; right:44px;}
+        .cboxSlideshow_off #cboxSlideshow.hover{background-position:-75px -25px;}
+/* COLORBOX STYLE END */
